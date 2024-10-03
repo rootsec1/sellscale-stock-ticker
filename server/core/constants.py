@@ -8,7 +8,7 @@ TOP_US_STOCK_SYMBOLS = [
     "GOOGL",
     "AMZN",
     "TSLA",
-    "FB",
+    "META",
     "NVDA",
     "JPM",
     "V",

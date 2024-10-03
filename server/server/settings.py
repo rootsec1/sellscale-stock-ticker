@@ -26,7 +26,8 @@ SECRET_KEY = os.getenv("SECRET_KEY", "sk-test-0000")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("NODE_ENV", "dev") == "dev"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 INSTALLED_APPS = [
