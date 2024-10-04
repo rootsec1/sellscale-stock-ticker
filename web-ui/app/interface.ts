@@ -161,3 +161,12 @@ export interface IResolution {
   height: number;
   tag: string;
 }
+
+export interface IEnhancedStock {
+  name: string;
+  ticker: string;
+  quantity: number;
+  buy_price: number;
+  current_price: number;
+  profit_loss_percent: number;
+}

@@ -1,5 +1,9 @@
+"use client";
+
 import { NextUIProvider } from "@nextui-org/react";
 import { Poppins } from "next/font/google";
+import { SnackbarProvider } from "notistack";
+
 // Local
 import "./globals.css";
 import NavbarCustom from "./navbar";
@@ -19,6 +23,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <NextUIProvider>
           <NavbarCustom />
+          <SnackbarProvider />
           {children}
         </NextUIProvider>
       </body>

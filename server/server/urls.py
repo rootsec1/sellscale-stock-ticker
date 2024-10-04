@@ -27,6 +27,5 @@ urlpatterns = [
     path("stock/buy_or_sell_stock/", buy_or_sell_stock),
     path("stock/get_top_stocks/", get_top_stocks),
     path("stock/get_portfolio/", get_portfolio),
-    path("stock/search_stock/", search_stock),
     path("", health_check),
 ]

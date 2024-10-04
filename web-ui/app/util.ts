@@ -1,7 +1,10 @@
-import { FetchOptions } from "./interface";
+import { enqueueSnackbar } from "notistack";
+// Local
+import { API_URL } from "./constants";
+import { IFetchOptions } from "./interface";
 
 // Utility function to fetch data from an API
-export async function fetchData(url: string, options: FetchOptions = {}) {
+export async function fetchData(url: string, options: IFetchOptions = {}) {
   const { method = "GET", headers = {}, body = null } = options;
 
   try {
@@ -30,4 +33,23 @@ export async function fetchData(url: string, options: FetchOptions = {}) {
     console.error("Fetch error:", error);
     throw error;
   }
+}
+
+export async function fetchStockDataFromSymbol(symbol: string) {
+  const response = await fetchData(
+    `${API_URL}/stock/lookup_stock/?symbol=${symbol}`
+  );
+  return response.data;
+}
+
+export function alertUser(message: string, variant: any) {
+  enqueueSnackbar(message, {
+    variant,
+    preventDuplicate: true,
+    autoHideDuration: 3000,
+    anchorOrigin: {
+      vertical: "bottom",
+      horizontal: "right",
+    },
+  });
 }

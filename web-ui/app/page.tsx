@@ -7,7 +7,7 @@ import TopStockSection from "./sections/top-stocks";
 
 export default function HomePage() {
   return (
-    <div className="flex w-full items-stretch mt-2 space-x-4 gap-4">
+    <div className="flex w-full items-stretch mt-2">
       <div className="w-1/3">
         <PortfolioSection />
       </div>
