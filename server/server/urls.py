@@ -17,6 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Local
+from .views import health_check
+from core.views import *
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path("stock/lookup_stock/", lookup_stock),
+    path("stock/buy_or_sell_stock/", buy_or_sell_stock),
+    path("stock/get_top_stocks/", get_top_stocks),
+    path("stock/get_portfolio/", get_portfolio),
+    path("", health_check),
 ]
